@@ -1,0 +1,157 @@
+```html
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORDHAUS Estate</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #1a2332;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            font-family: Georgia, serif;
+        }
+        .hero {
+            padding: 50px;
+            text-align: center;
+            background-color: #c9a961;
+            color: #1a2332;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        section {
+            padding: 50px;
+            background-color: #ffffff;
+        }
+        .services, .investments {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 20px;
+            width: calc(33% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .card h2 {
+            font-family: Georgia, serif;
+        }
+        .contact {
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+        button {
+            background-color: #c9a961;
+            color: #1a2332;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>PROJEKT DEMONSTRACYJNY — DANE FIKCYJNE</header>
+    <div class="hero">
+        <h1>NORDHAUS Estate - Pakiety mieszkaniowe dla inwestorów instytucjonalnych</h1>
+        <p>Specjalistyczne doradztwo w zakresie nieruchomości B2B</p>
+    </div>
+    <section id="about">
+        <h2>O nas</h2>
+        <p>NORDHAUS Estate to wiodąca firma brokerska z siedzibą w Pruszkowie, która specjalizuje się w pośrednictwie w sprzedaży pakietów mieszkań deweloperom oraz funduszom PRS...</p>
+    </section>
+    <section id="services">
+        <h2>Usługi</h2>
+        <div class="services">
+            <div class="card">
+                <h2>Doradztwo transakcyjne</h2>
+                <p>Oferujemy kompleksowe doradztwo przy realizacji transakcji zakupu pakietów mieszkań, zapewniając wsparcie na każdym etapie procesu.</p>
+            </div>
+            <div class="card">
+                <h2>Wycena pakietów</h2>
+                <p>Przygotowujemy rzetelne wyceny pakietów nieruchomości, które umożliwiają naszym klientom podejmowanie świadomych decyzji inwestycyjnych.</p>
+            </div>
+            <div class="card">
+                <h2>Due diligence</h2>
+                <p>Przeprowadzamy szczegółowe analizy legalności i wartości nieruchomości, które mają na celu zminimalizowanie ryzyka inwestycyjnego.</p>
+            </div>
+            <div class="card">
+                <h2>Pośrednictwo PRS</h2>
+                <p>Specjalizujemy się w pośrednictwie w projektach PRS (Private Rental Sector), oferując dostęp do atrakcyjnych inwestycji w nieruchomości na wynajem.</p>
+            </div>
+        </div>
+    </section>
+    <section id="investments">
+        <h2>Zrealizowane inwestycje</h2>
+        <div class="investments">
+            <div class="card">
+                <h2>Osiedle Wiślana Przystań</h2>
+                <p>Warszawa, Wilanów | 148 Lokale | Rok 2023</p>
+                <p>Nowoczesne osiedle w jednym z najbardziej prestiżowych rejonów Warszawy...</p>
+            </div>
+            <div class="card">
+                <h2>Apartamenty Kolejowa 12</h2>
+                <p>Wrocław, Nadodrze | 96 Lokale | Rok 2023</p>
+                <p>Stylowe apartamenty w sercu Wrocławia, idealne dla osób poszukujących komfortu i bliskości do centrum miasta.</p>
+            </div>
+            <div class="card">
+                <h2>Osiedle Brzozowy Zakątek</h2>
+                <p>Gdańsk, Jasień | 210 Lokale | Rok 2024</p>
+                <p>Rodzinne osiedle w malowniczej okolicy Gdańska, które łączy ze sobą nowoczesność z naturą.</p>
+            </div>
+            <div class="card">
+                <h2>Kwartał Solaris</h2>
+                <p>Kraków, Zabłocie | 132 Lokale | Rok 2024</p>
+                <p>Inwestycja w trendy i kreatywnie rozwijającej się dzielnicy Krakowa, dedykowana młodym profesjonalistom.</p>
+            </div>
+            <div class="card">
+                <h2>Osiedle Leśna Polana</h2>
+                <p>Poznań, Naramowice | 174 Lokale | Rok 2025</p>
+                <p>Osiedle z przestronnymi mieszkaniami w Zielonej okolicy Poznania, zapewniające komfort i spokój mieszkańcom.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <div class="contact">
+            <p>Zapraszamy do kontaktu w celu uzyskania dodatkowych informacji oraz omówienia naszych usług. Jesteśmy do Państwa dyspozycji.</p>
+            <p>Email: kontakt@nordhausestate.pl</p>
+            <p>Telefon: +48 123 456 789</p>
+            <p>Adres: Pruszków, ul. Srebrna 24</p>
+            <form>
+                <input type="text" placeholder="Twoje imię" required><br>
+                <input type="email" placeholder="Twój email" required><br>
+                <textarea placeholder="Twoja wiadomość" required></textarea><br>
+                <button type="submit">Wyślij</button>
+            </form>
+        </div>
+    </section>
+    <footer>PROJEKT DEMONSTRACYJNY — DANE FIKCYJNE</footer>
+</body>
+</html>
+```
