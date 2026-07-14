@@ -1,157 +1,164 @@
-```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NORDHAUS Estate</title>
     <style>
         body {
-            font-family: sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #1a2332;
         }
-        header, footer {
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+        }
+        .banner {
+            background-color: #c9a961;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #1a2332;
+        }
+        header {
+            background-color: #1a2332;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header p {
+            margin-top: 5px;
+            font-size: 1.1em;
+        }
+        section {
+            padding: 20px;
+        }
+        .service-card, .investment-card {
+            background-color: #ffffff;
+            border: 1px solid #c9a961;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .card-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        .card-desc {
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        footer {
             background-color: #1a2332;
             color: #ffffff;
             text-align: center;
-            padding: 10px 0;
-            font-family: Georgia, serif;
+            padding: 10px;
         }
-        .hero {
-            padding: 50px;
-            text-align: center;
+        .btn {
+            display: inline-block;
             background-color: #c9a961;
             color: #1a2332;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-        }
-        .hero p {
-            font-size: 1.2em;
-        }
-        section {
-            padding: 50px;
-            background-color: #ffffff;
-        }
-        .services, .investments {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .card {
-            background-color: #f7f7f7;
-            border: 1px solid #ddd;
-            margin: 10px;
-            padding: 20px;
-            width: calc(33% - 40px);
-            box-sizing: border-box;
-            text-align: center;
-        }
-        .card h2 {
-            font-family: Georgia, serif;
-        }
-        .contact {
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            .card {
-                width: calc(50% - 40px);
-            }
-        }
-        @media (max-width: 480px) {
-            .card {
-                width: 100%;
-            }
-        }
-        button {
-            background-color: #c9a961;
-            color: #1a2332;
-            border: none;
             padding: 10px 20px;
-            cursor: pointer;
-            margin-top: 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .responsive-grid {
+            display: grid;
+            gap: 20px;
+        }
+        @media (min-width: 600px) {
+            .responsive-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 900px) {
+            .responsive-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
+    <title>NORDHAUS Estate</title>
 </head>
 <body>
-    <header>PROJEKT DEMONSTRACYJNY — DANE FIKCYJNE</header>
-    <div class="hero">
-        <h1>NORDHAUS Estate - Pakiety mieszkaniowe dla inwestorów instytucjonalnych</h1>
-        <p>Specjalistyczne doradztwo w zakresie nieruchomości B2B</p>
-    </div>
-    <section id="about">
+    <div class="banner">PROJEKT DEMONSTRACYJNY — DANE FIKCYJNE</div>
+    <header>
+        <h1>NORDHAUS Estate - Twoje zaufane pośrednictwo w nieruchomościach</h1>
+        <p>Pakiety mieszkaniowe dla inwestorów instytucjonalnych</p>
+    </header>
+    <section>
         <h2>O nas</h2>
-        <p>NORDHAUS Estate to wiodąca firma brokerska z siedzibą w Pruszkowie, która specjalizuje się w pośrednictwie w sprzedaży pakietów mieszkań deweloperom oraz funduszom PRS...</p>
+        <p>NORDHAUS Estate to profesjonalna firma brokerska, specjalizująca się w pośrednictwie w sprzedaży pakietów mieszkań deweloperom oraz funduszom PRS. Nasza siedziba znajduje się w Pruszkowie, skąd obsługujemy inwestycje w całej Polsce. Dzięki naszemu doświadczeniu oraz wiedzy rynkowej, dostarczamy klientom kompleksowe usługi doradcze, zapewniając sukces ich inwestycji. Koncentrujemy się na budowaniu długotrwałych relacji z naszymi partnerami biznesowymi, co pozwala nam lepiej zrozumieć ich potrzeby i oczekiwania. NORDHAUS Estate to pewność w dynamicznym świecie nieruchomości.</p>
     </section>
-    <section id="services">
+    <section>
         <h2>Usługi</h2>
-        <div class="services">
-            <div class="card">
-                <h2>Doradztwo transakcyjne</h2>
-                <p>Oferujemy kompleksowe doradztwo przy realizacji transakcji zakupu pakietów mieszkań, zapewniając wsparcie na każdym etapie procesu.</p>
+        <div class="responsive-grid">
+            <div class="service-card">
+                <h3 class="card-title">Doradztwo transakcyjne</h3>
+                <p class="card-desc">Oferujemy kompleksowe doradztwo podczas zakupu i sprzedaży nieruchomości, wspierając naszych klientów na każdym etapie transakcji.</p>
             </div>
-            <div class="card">
-                <h2>Wycena pakietów</h2>
-                <p>Przygotowujemy rzetelne wyceny pakietów nieruchomości, które umożliwiają naszym klientom podejmowanie świadomych decyzji inwestycyjnych.</p>
+            <div class="service-card">
+                <h3 class="card-title">Wycena pakietów</h3>
+                <p class="card-desc">Nasze usługi obejmują precyzyjną wycenę pakietów mieszkań, co pozwala na optymalne wykorzystanie potencjału inwestycyjnego.</p>
             </div>
-            <div class="card">
-                <h2>Due diligence</h2>
-                <p>Przeprowadzamy szczegółowe analizy legalności i wartości nieruchomości, które mają na celu zminimalizowanie ryzyka inwestycyjnego.</p>
+            <div class="service-card">
+                <h3 class="card-title">Due diligence</h3>
+                <p class="card-desc">Przeprowadzamy szczegółowe analizy due diligence, co pozwala na minimalizację ryzyk związanych z transakcjami nieruchomościowymi.</p>
             </div>
-            <div class="card">
-                <h2>Pośrednictwo PRS</h2>
-                <p>Specjalizujemy się w pośrednictwie w projektach PRS (Private Rental Sector), oferując dostęp do atrakcyjnych inwestycji w nieruchomości na wynajem.</p>
+            <div class="service-card">
+                <h3 class="card-title">Pośrednictwo PRS</h3>
+                <p class="card-desc">Specjalizujemy się w pośrednictwie w inwestycjach w sektorze PRS, łącząc deweloperów z inwestorami instytucjonalnymi.</p>
             </div>
         </div>
     </section>
-    <section id="investments">
+    <section>
         <h2>Zrealizowane inwestycje</h2>
-        <div class="investments">
-            <div class="card">
-                <h2>Osiedle Wiślana Przystań</h2>
-                <p>Warszawa, Wilanów | 148 Lokale | Rok 2023</p>
-                <p>Nowoczesne osiedle w jednym z najbardziej prestiżowych rejonów Warszawy...</p>
+        <div class="responsive-grid">
+            <div class="investment-card">
+                <h3 class="card-title">Osiedle Wiślana Przystań</h3>
+                <p class="card-desc">Warszawa, Wilanów - 148 lokali, 2023<br>Nowoczesne osiedle w atrakcyjnej lokalizacji, oferujące wygodne lokale mieszkalne z przestronnymi tarasami.</p>
             </div>
-            <div class="card">
-                <h2>Apartamenty Kolejowa 12</h2>
-                <p>Wrocław, Nadodrze | 96 Lokale | Rok 2023</p>
-                <p>Stylowe apartamenty w sercu Wrocławia, idealne dla osób poszukujących komfortu i bliskości do centrum miasta.</p>
+            <div class="investment-card">
+                <h3 class="card-title">Apartamenty Kolejowa 12</h3>
+                <p class="card-desc">Wrocław, Nadodrze - 96 lokali, 2023<br>Stylowe apartamenty w sercu Wrocławia, idealne dla nowoczesnych inwestorów poszukujących komfortu i funkcjonalności.</p>
             </div>
-            <div class="card">
-                <h2>Osiedle Brzozowy Zakątek</h2>
-                <p>Gdańsk, Jasień | 210 Lokale | Rok 2024</p>
-                <p>Rodzinne osiedle w malowniczej okolicy Gdańska, które łączy ze sobą nowoczesność z naturą.</p>
+            <div class="investment-card">
+                <h3 class="card-title">Osiedle Brzozowy Zakątek</h3>
+                <p class="card-desc">Gdańsk, Jasień - 210 lokali, 2024<br>Osiedle z bogatą infrastrukturą, blisko natury, z wyjątkową ofertą mieszkań rodzinnych.</p>
             </div>
-            <div class="card">
-                <h2>Kwartał Solaris</h2>
-                <p>Kraków, Zabłocie | 132 Lokale | Rok 2024</p>
-                <p>Inwestycja w trendy i kreatywnie rozwijającej się dzielnicy Krakowa, dedykowana młodym profesjonalistom.</p>
+            <div class="investment-card">
+                <h3 class="card-title">Kwartał Solaris</h3>
+                <p class="card-desc">Kraków, Zabłocie - 132 lokale, 2024<br>Nowoczesne lokale mieszkalne z dostępem do usług miejskich, idealne dla młodych ludzi i rodzin.</p>
             </div>
-            <div class="card">
-                <h2>Osiedle Leśna Polana</h2>
-                <p>Poznań, Naramowice | 174 Lokale | Rok 2025</p>
-                <p>Osiedle z przestronnymi mieszkaniami w Zielonej okolicy Poznania, zapewniające komfort i spokój mieszkańcom.</p>
+            <div class="investment-card">
+                <h3 class="card-title">Osiedle Leśna Polana</h3>
+                <p class="card-desc">Poznań, Naramowice - 174 lokale, 2025<br>Osiedle łączące nowoczesną architekturę z naturą, tworzące unikalne miejsce do życia.</p>
             </div>
         </div>
     </section>
-    <section id="contact">
+    <section>
         <h2>Kontakt</h2>
-        <div class="contact">
-            <p>Zapraszamy do kontaktu w celu uzyskania dodatkowych informacji oraz omówienia naszych usług. Jesteśmy do Państwa dyspozycji.</p>
-            <p>Email: kontakt@nordhausestate.pl</p>
-            <p>Telefon: +48 123 456 789</p>
-            <p>Adres: Pruszków, ul. Srebrna 24</p>
-            <form>
-                <input type="text" placeholder="Twoje imię" required><br>
-                <input type="email" placeholder="Twój email" required><br>
-                <textarea placeholder="Twoja wiadomość" required></textarea><br>
-                <button type="submit">Wyślij</button>
-            </form>
-        </div>
+        <p class="contact-info">Zapraszamy do kontaktu z naszą firmą. Chętnie odpowiemy na wszystkie pytania oraz przedstawimy szczegółową ofertę.</p>
+        <p class="contact-info">E-mail: kontakt@nordhausestate.pl</p>
+        <p class="contact-info">Telefon: +48 123 456 789</p>
+        <p class="contact-info">Adres: Pruszków, ul. Srebrna 24</p>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Twoje imię" required style="display: block; margin-bottom: 10px; padding: 10px; width: 100%;">
+            <input type="email" name="email" placeholder="Twój email" required style="display: block; margin-bottom: 10px; padding: 10px; width: 100%;">
+            <textarea name="message" placeholder="Wiadomość" rows="5" required style="display: block; margin-bottom: 10px; padding: 10px; width: 100%;"></textarea>
+            <button type="submit" class="btn">Wyślij</button>
+        </form>
     </section>
-    <footer>PROJEKT DEMONSTRACYJNY — DANE FIKCYJNE</footer>
+    <footer>
+        <p>PROJEKT DEMONSTRACYJNY — DANE FIKCYJNE</p>
+    </footer>
 </body>
 </html>
-```
